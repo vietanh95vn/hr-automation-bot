@@ -1,11 +1,15 @@
 import requests
 import pandas as pd
+import os
 
 def send_telegram_alert(lazy_employees_1):
     #standardized alert sending function . take a number  as input
-    TOKEN = "8646167058:AAEYkAIe9YteGrMNKJ-1wOm82S8ef7uWTxE"
+    TOKEN = os.envrion.get("TELEGRAM_TOKEN")
     
-    CHAT_ID = "6297429333"
+    CHAT_ID = os.evriron.get("TELEGRAM_CHAT_ID")
+    if not TOKEN or not CHAT_ID:
+        print("❌ Lỗi nghiêm trọng: Không tìm thấy Két sắt bảo mật!")
+        return
     
     #flexible message using input
     
@@ -49,4 +53,5 @@ if __name__ == "__main__":
     except requests.exceptions.RequestException as e:
         print(f"capble international crash {e}")
         
+
         
