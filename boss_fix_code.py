@@ -6,7 +6,7 @@ def send_telegram_alert(lazy_employees_1):
     #standardized alert sending function . take a number  as input
     TOKEN = os.envrion.get("TELEGRAM_TOKEN")
     
-    CHAT_ID = os.evriron.get("TELEGRAM_CHAT_ID")
+    CHAT_ID = os.envriron.get("TELEGRAM_CHAT_ID")
     if not TOKEN or not CHAT_ID:
         print("❌ Lỗi nghiêm trọng: Không tìm thấy Két sắt bảo mật!")
         return
@@ -55,3 +55,4 @@ if __name__ == "__main__":
         
 
         
+
