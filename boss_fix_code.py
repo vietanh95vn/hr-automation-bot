@@ -4,9 +4,9 @@ import os
 
 def send_telegram_alert(lazy_employees_1):
     #standardized alert sending function . take a number  as input
-    TOKEN = os.environ.get("TELEGRAM_TOKEN")
+    TOKEN = os.environ.get("") # tạm thời xoá 2 token này đi khi nào dùng sử dụng sau
     
-    CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+    CHAT_ID = os.environ.get("") # tạm thời xoá 2 token này đi khi nào dùng sử dụng sau
     if not TOKEN or not CHAT_ID:
         print("❌ Lỗi nghiêm trọng: Không tìm thấy Két sắt bảo mật!")
         return
@@ -55,5 +55,6 @@ if __name__ == "__main__":
         
 
         
+
 
 
